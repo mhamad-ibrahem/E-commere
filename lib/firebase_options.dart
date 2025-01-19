@@ -63,7 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '590606557388',
     projectId: 'e-commerce-8779f',
     storageBucket: 'e-commerce-8779f.firebasestorage.app',
-    iosBundleId: 'com.example.riverpodECommerce',
+    iosBundleId: 'com.example.riverpodECommerce1',
   );
 
 }
