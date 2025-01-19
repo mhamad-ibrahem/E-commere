@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_e_commerce/core/config/app_config.dart';
@@ -8,6 +9,7 @@ import '../../../../../core/routes/app_router.dart';
 import '../../../../../core/routes/constant/app_routes.dart';
 import '../../../../../core/services/app_services.dart';
 import '../../../../../core/services/supa_base/supa_base_service.dart';
+import '../../../../../firebase_options.dart';
 import '../../../data/model/splash_state_model.dart';
 import '../../../domain/use_case/get_local_user_data_use_case.dart';
 
@@ -25,6 +27,9 @@ class SplashNotifier extends StateNotifier<SplashStateModel> {
         AppServices.localUserData = await getUserLocalDataUseCase.execute();
         await AppConfig.initialEnvData();
         await SupaBaseService.init();
+        await Firebase.initializeApp(
+          options: DefaultFirebaseOptions.currentPlatform,
+        );
         state = state.copyWith(statusRequest: StatusRequest.success);
         LogHelper.logSuccess("token is :  ${AppServices.localUserData?.token}");
         LogHelper.logMagenta("user id is ${AppServices.localUserData?.id}");

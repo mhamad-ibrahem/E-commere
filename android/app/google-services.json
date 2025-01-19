@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "590606557388",
+    "project_id": "e-commerce-8779f",
+    "storage_bucket": "e-commerce-8779f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590606557388:android:2d1ccfe91dbe2bde3c2269",
+        "android_client_info": {
+          "package_name": "com.example.riverpod_e_commerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ_XG2zn4fKiPlxz3YDgPFD9jwI9F0frs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
